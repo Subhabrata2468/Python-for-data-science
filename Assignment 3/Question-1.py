@@ -1,5 +1,5 @@
 '''
-Find the derivate of using limit of the difference coeffficient method at x = 1.
+Find the derivate of using limit of the difference coefficient method at x = 1.
 f(x) = ex 2 + sin(x) − tan(x) + log(x)
 '''
 import math
@@ -17,3 +17,7 @@ def derivative(f, x, h):
 deriv = derivative(f, x, h)
 
 print(f"The derivative of f(x) at x = {x} is approximately {deriv}")
+
+'''
+The derivative of f(x) at x = 1 is approximately 3.551349041952534
+'''

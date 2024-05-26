@@ -5,10 +5,10 @@ at the point (1,2). Rosenbrock function is defined below. f(x,y) = (1 − x) 2 +
 def rosenbrock(x, y):
     return (1 - x)**2 + 100 * (y - x**2)**2
 
-def partial_derivative_x(f, x, y, h):
+def partial_derivative_x( x, y, h):
     return (f(x + h, y) - f(x, y)) / h
 
-def partial_derivative_y(f, x, y, h):
+def partial_derivative_y(x, y, h):
     return (f(x, y + h) - f(x, y)) / h
 
 x = 1
@@ -16,8 +16,8 @@ y = 2
 h = 0.000001
 
 # Calculate the partial derivatives at (x, y)
-partial_x = partial_derivative_x(rosenbrock, x, y, h)
-partial_y = partial_derivative_y(rosenbrock, x, y, h)
+partial_x = partial_derivative_x(x, y, h)
+partial_y = partial_derivative_y(x, y, h)
 
 print(f"The partial derivative with respect to x at (1, 2) is approximately {partial_x}")
 print(f"The partial derivative with respect to y at (1, 2) is approximately {partial_y}")

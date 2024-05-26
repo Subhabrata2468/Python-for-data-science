@@ -6,12 +6,12 @@ import numpy as np
 
 # Define the Rosenbrock function
 def rosenbrock(x, y):
-    return (1 - x)**2 + 100 * (y - x**2)**2
+    return (1 - x)**2 + (y - x**2)**2
 
 # Define the partial derivatives of the Rosenbrock function
 def rosenbrock_grad(x, y):
-    df_dx = -2 * (1 - x) - 400 * x * (y - x**2)
-    df_dy = 200 * (y - x**2)
+    df_dx = -2 * (1 - x) - 4 * x * (y - x**2)
+    df_dy = 2 * (y - x**2)
     return np.array([df_dx, df_dy])
 
 # Gradient Descent method for Rosenbrock function

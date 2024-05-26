@@ -9,12 +9,12 @@ h = 0.000001
 def f(x):
     return math.exp(x**2) + math.sin(x) - math.tan(x) + math.log(x)
 
-def derivative(f, x, h):
+def derivative(x, h):
     return (f(x + h) - f(x)) / h
 
 
 # Calculate the derivative at x = 1
-deriv = derivative(f, x, h)
+deriv = derivative(x, h)
 
 print(f"The derivative of f(x) at x = {x} is approximately {deriv}")
 
